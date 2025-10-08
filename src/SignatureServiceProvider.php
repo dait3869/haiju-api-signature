@@ -14,7 +14,7 @@ class SignatureServiceProvider extends ServiceProvider
     {
         // 合并配置
         $this->mergeConfigFrom(
-            __DIR__ . '/Config/api-signature.php',
+            __DIR__ . '/../config/api-signature.php',
             'api-signature'
         );
 
@@ -34,7 +34,7 @@ class SignatureServiceProvider extends ServiceProvider
     {
         // 发布配置文件
         $this->publishes([
-            __DIR__ . '/Config/api-signature.php' => config_path('api-signature.php'),
+            __DIR__ . '/../config/api-signature.php' => config_path('api-signature.php'),
         ], 'api-signature-config');
 
         // 注册中间件
